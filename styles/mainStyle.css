@@ -1,3 +1,202 @@
-body{
-    background-color: rgb(74, 74, 78);
+@import url('http://fonts.googleapis.com/css?family=Inter');
+
+:root{
+    --mainBackgroundColor : #fef2f2;
+    --generalBackgroundColor: #f7f7f7;
+    --letterColor : #202020;
+    --lightLetterColor: #727272;
+    --primaryColor : #f26440;
+    --secondaryColor : #286f6c;
 }
+
+
+
+body{
+    background-color: var(--generalBackgroundColor);
+    font-family: Inter;
+    font-size: 18px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.navBar{
+    transition: top ease-in-out 500ms;
+    display: flex;
+    flex-direction: column;     
+    align-items: center;
+
+    position: fixed;
+    width: 100%;
+    padding-top: 4vh;
+
+    z-index: 1000;
+}
+
+.navBar-ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navBar-ul--li{
+    margin: 0px 5px;
+    position: relative;
+}
+
+.navBar-ul--li---a{
+    color: var(--letterColor);
+    font-size: 1.2rem;
+    padding: 0 1.4rem;
+}
+
+.navBar-ul--li:nth-child(1) a{
+    color: #286f6c;
+    font-weight: bolder;
+}
+
+
+main{
+    background-color: var(--mainBackgroundColor);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+
+
+.mainWelcome{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 75vw;
+    height: 80vh;
+
+}
+
+.mainWelcome-Information{
+
+}
+
+.mainWelcome-Information--headers h2{
+    color: var(--letterColor);
+    font-size: 6rem;
+    font-weight: bolder;
+    line-height: 0.2;
+}
+
+
+.mainWelcome-Information--SocialsNetworks{
+    height: 3rem;
+}
+.mainWelcome-Information--SocialsNetworks a{
+    display: inline;
+    background-color: var(--primaryColor);
+    border-color: var(--generalBackgroundColor);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50%;
+
+    display: inline-flex;
+    justify-content: center;
+    align-self: center;
+    width: 3em;
+    height: 3em;
+}
+
+.mainWelcome-Information--SocialsNetworks img{
+    width: 2rem;
+}
+
+.mainWelcome-InformationImage{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    
+}
+
+
+.mainWelcome-InformationImage--circle{
+    position:absolute;
+    width: 40vw;
+    height: 40vw;
+    background-color: var(--secondaryColor);
+    border-radius: 50%;
+    margin-bottom: 2vw;
+}
+.mainWelcome-InformationImage--img{
+    position:absolute;
+    height: 40vw;
+}
+
+
+#aboutMe{
+    display: grid;
+    grid-template-areas: 
+        'headerArea'
+        'textArea';
+    justify-content: center;
+    margin-top: 10vh;
+    
+}
+
+.aboutMe-text{
+    grid-area: textArea;
+    width: 70vw;
+    color: var(--lightLetterColor);
+    font-size: 1.5rem;
+}
+
+.section-header{
+    grid-area: headerArea;
+    color: var(--secondaryColor);
+    font-size: 3rem;
+    line-height: 0.5;
+}
+
+.skills-bigCircle{
+    width: 40vw;
+    height: 40vw;
+    background-color: var(--secondaryColor);
+    border-radius: 50%;
+    z-index: 30;
+}
+
+.skills-littleCircle{
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    background-color: var(--primaryColor);
+    border-radius: 50%;
+    margin-top: 10vh;
+}
+
+#skills{
+    position: absolute;
+    z-index: 900;
+    
+    display: grid;
+    grid-template-areas: 
+        'headerArea'
+        'boxesArea';
+    justify-content: center;
+
+    margin-top: 10vh;
+}
+
+.skills-header{
+    grid-area: headerArea;
+    color: var(--generalBackgroundColor);
+}
+
+.skills-boxes{
+    grid-area: boxesArea;
+}
+
+
+
+
+
